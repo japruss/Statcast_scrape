@@ -1,5 +1,5 @@
 #scrape week by week for the whole season. have to do this as statcast only permits 40,000 records at a time
-
+#2019
 mar19B<-scrape_statcast_savant_batter_all("2019-03-01","2019-04-05")
 
 apr19B1<-scrape_statcast_savant_batter_all("2019-04-05","2019-04-13")
@@ -41,5 +41,182 @@ sc2019B <- bind_rows(mar19B,apr19B1,apr19B2,apr19B3,may19B1,may19B2,may19B3,may1
 
 #Remove duplicates
 sc2019B<-distinct(sc2019B)
+
+
+#2018
+mar18B<-scrape_statcast_savant_batter_all("2018-03-01","2018-04-05")
+
+apr18B1<-scrape_statcast_savant_batter_all("2018-04-05","2018-04-13")
+apr18B2<-scrape_statcast_savant_batter_all("2018-04-13","2018-04-20")
+apr18B3<-scrape_statcast_savant_batter_all("2018-04-20","2018-04-28")
+
+may18B1<-scrape_statcast_savant_batter_all("2018-04-28","2018-05-05")
+may18B2<-scrape_statcast_savant_batter_all("2018-05-05","2018-05-13")
+may18B3<-scrape_statcast_savant_batter_all("2018-05-13","2018-05-21")
+may18B4<-scrape_statcast_savant_batter_all("2018-05-21","2018-05-29")
+
+jun18B1<-scrape_statcast_savant_batter_all("2018-05-29","2018-06-05")
+jun18B2<-scrape_statcast_savant_batter_all("2018-06-05","2018-06-13")
+jun18B3<-scrape_statcast_savant_batter_all("2018-06-13","2018-06-21")
+jun18B4<-scrape_statcast_savant_batter_all("2018-06-21","2018-06-29")
+
+jul18B1<-scrape_statcast_savant_batter_all("2018-06-29","2018-07-06")
+jul18B2<-scrape_statcast_savant_batter_all("2018-07-06","2018-07-13")
+jul18B3<-scrape_statcast_savant_batter_all("2018-07-13","2018-07-20")
+jul18B4<-scrape_statcast_savant_batter_all("2018-07-20","2018-07-27")
+
+aug18B1<-scrape_statcast_savant_batter_all("2018-07-27","2018-08-03")
+aug18B2<-scrape_statcast_savant_batter_all("2018-08-03","2018-08-10")
+aug18B3<-scrape_statcast_savant_batter_all("2018-08-10","2018-08-17")
+aug18B4<-scrape_statcast_savant_batter_all("2018-08-17","2018-08-24")
+aug18B5<-scrape_statcast_savant_batter_all("2018-08-24","2018-08-31")
+
+sep18B1<-scrape_statcast_savant_batter_all("2018-08-31","2018-09-06")
+sep18B2<-scrape_statcast_savant_batter_all("2018-09-06","2018-09-13")
+sep18B3<-scrape_statcast_savant_batter_all("2018-09-13","2018-09-20")
+sep18B4<-scrape_statcast_savant_batter_all("2018-09-20","2018-09-27")
+
+oct18B1<-scrape_statcast_savant_batter_all("2018-09-27","2018-10-04")
+oct18B2<-scrape_statcast_savant_batter_all("2018-10-04","2018-10-18")
+oct18B3<-scrape_statcast_savant_batter_all("2018-10-18","2018-12-31")
+
+#combine all files
+sc2018B <- bind_rows(mar18B,apr18B1,apr18B2,apr18B3,may18B1,may18B2,may18B3,may18B4,jun18B1,jun18B2,jun18B3,jun18B4,jul18B1,jul18B2,jul18B3,jul18B4,aug18B1,aug18B2,aug18B3,aug18B4,aug18B5,sep18B1,sep18B2,sep18B3,sep18B4,oct18B1,oct18B2,oct18B3)
+
+#Remove duplicates
+sc2018B<-distinct(sc2018B)
+
+
+#2017
+mar17B<-scrape_statcast_savant_batter_all("2017-03-01","2017-04-05")
+
+apr17B1<-scrape_statcast_savant_batter_all("2017-04-05","2017-04-13")
+apr17B2<-scrape_statcast_savant_batter_all("2017-04-13","2017-04-20")
+apr17B3<-scrape_statcast_savant_batter_all("2017-04-20","2017-04-28")
+
+may17B1<-scrape_statcast_savant_batter_all("2017-04-28","2017-05-05")
+may17B2<-scrape_statcast_savant_batter_all("2017-05-05","2017-05-13")
+may17B3<-scrape_statcast_savant_batter_all("2017-05-13","2017-05-21")
+may17B4<-scrape_statcast_savant_batter_all("2017-05-21","2017-05-29")
+
+jun17B1<-scrape_statcast_savant_batter_all("2017-05-29","2017-06-05")
+jun17B2<-scrape_statcast_savant_batter_all("2017-06-05","2017-06-13")
+jun17B3<-scrape_statcast_savant_batter_all("2017-06-13","2017-06-21")
+jun17B4<-scrape_statcast_savant_batter_all("2017-06-21","2017-06-29")
+
+jul17B1<-scrape_statcast_savant_batter_all("2017-06-29","2017-07-06")
+jul17B2<-scrape_statcast_savant_batter_all("2017-07-06","2017-07-13")
+jul17B3<-scrape_statcast_savant_batter_all("2017-07-13","2017-07-20")
+jul17B4<-scrape_statcast_savant_batter_all("2017-07-20","2017-07-27")
+
+aug17B1<-scrape_statcast_savant_batter_all("2017-07-27","2017-08-03")
+aug17B2<-scrape_statcast_savant_batter_all("2017-08-03","2017-08-10")
+aug17B3<-scrape_statcast_savant_batter_all("2017-08-10","2017-08-17")
+aug17B4<-scrape_statcast_savant_batter_all("2017-08-17","2017-08-24")
+aug17B5<-scrape_statcast_savant_batter_all("2017-08-24","2017-08-31")
+
+sep17B1<-scrape_statcast_savant_batter_all("2017-08-31","2017-09-06")
+sep17B2<-scrape_statcast_savant_batter_all("2017-09-06","2017-09-13")
+sep17B3<-scrape_statcast_savant_batter_all("2017-09-13","2017-09-20")
+sep17B4<-scrape_statcast_savant_batter_all("2017-09-20","2017-09-27")
+
+oct17B1<-scrape_statcast_savant_batter_all("2017-09-27","2017-10-04")
+oct17B2<-scrape_statcast_savant_batter_all("2017-10-04","2017-10-17")
+oct17B3<-scrape_statcast_savant_batter_all("2017-10-17","2017-12-31")
+
+#combine files
+sc2017B <- bind_rows(mar17B,apr17B1,apr17B2,apr17B3,may17B1,may17B2,may17B3,may17B4,jun17B1,jun17B2,jun17B3,jun17B4,jul17B1,jul17B2,jul17B3,jul17B4,aug17B1,aug17B2,aug17B3,aug17B4,aug17B5,sep17B1,sep17B2,sep17B3,sep17B4,oct17B1,oct17B2,oct17B3)
+
+#remove dupes
+sc2017B<-distinct(sc2017B)
+
+
+#2016
+mar16B<-scrape_statcast_savant_batter_all("2016-03-01","2016-04-05")
+
+apr16B1<-scrape_statcast_savant_batter_all("2016-04-05","2016-04-13")
+apr16B2<-scrape_statcast_savant_batter_all("2016-04-13","2016-04-20")
+apr16B3<-scrape_statcast_savant_batter_all("2016-04-20","2016-04-28")
+
+may16B1<-scrape_statcast_savant_batter_all("2016-04-28","2016-05-05")
+may16B2<-scrape_statcast_savant_batter_all("2016-05-05","2016-05-13")
+may16B3<-scrape_statcast_savant_batter_all("2016-05-13","2016-05-21")
+may16B4<-scrape_statcast_savant_batter_all("2016-05-21","2016-05-29")
+
+jun16B1<-scrape_statcast_savant_batter_all("2016-05-29","2016-06-05")
+jun16B2<-scrape_statcast_savant_batter_all("2016-06-05","2016-06-13")
+jun16B3<-scrape_statcast_savant_batter_all("2016-06-13","2016-06-21")
+jun16B4<-scrape_statcast_savant_batter_all("2016-06-21","2016-06-29")
+
+jul16B1<-scrape_statcast_savant_batter_all("2016-06-29","2016-07-06")
+jul16B2<-scrape_statcast_savant_batter_all("2016-07-06","2016-07-13")
+jul16B3<-scrape_statcast_savant_batter_all("2016-07-13","2016-07-20")
+jul16B4<-scrape_statcast_savant_batter_all("2016-07-20","2016-07-27")
+
+aug16B1<-scrape_statcast_savant_batter_all("2016-07-27","2016-08-03")
+aug16B2<-scrape_statcast_savant_batter_all("2016-08-03","2016-08-10")
+aug16B3<-scrape_statcast_savant_batter_all("2016-08-10","2016-08-18")
+aug16B4<-scrape_statcast_savant_batter_all("2016-08-18","2016-08-24")
+aug16B5<-scrape_statcast_savant_batter_all("2016-08-24","2016-08-31")
+
+sep16B1<-scrape_statcast_savant_batter_all("2016-08-31","2016-09-06")
+sep16B2<-scrape_statcast_savant_batter_all("2016-09-06","2016-09-13")
+sep16B3<-scrape_statcast_savant_batter_all("2016-09-13","2016-09-20")
+sep16B4<-scrape_statcast_savant_batter_all("2016-09-20","2016-09-27")
+
+oct16B1<-scrape_statcast_savant_batter_all("2016-09-27","2016-10-04")
+oct16B2<-scrape_statcast_savant_batter_all("2016-10-04","2016-10-18")
+oct16B3<-scrape_statcast_savant_batter_all("2016-10-18","2016-12-31")
+
+#combine files
+sc2016B <- bind_rows(mar16B,apr16B1,apr16B2,apr16B3,may16B1,may16B2,may16B3,may16B4,jun16B1,jun16B2,jun16B3,jun16B4,jul16B1,jul16B2,jul16B3,jul16B4,aug16B1,aug16B2,aug16B3,aug16B4,aug16B5,sep16B1,sep16B2,sep16B3,sep16B4,oct16B1,oct16B2,oct16B3)
+
+#remove dupes
+sc2016B<-distinct(sc2016B)
+
+
+#2015
+mar15B<-scrape_statcast_savant_batter_all("2015-03-01","2015-04-05")
+
+apr15B1<-scrape_statcast_savant_batter_all("2015-04-05","2015-04-13")
+apr15B2<-scrape_statcast_savant_batter_all("2015-04-13","2015-04-20")
+apr15B3<-scrape_statcast_savant_batter_all("2015-04-20","2015-04-28")
+
+may15B1<-scrape_statcast_savant_batter_all("2015-04-28","2015-05-05")
+may15B2<-scrape_statcast_savant_batter_all("2015-05-05","2015-05-13")
+may15B3<-scrape_statcast_savant_batter_all("2015-05-13","2015-05-21")
+may15B4<-scrape_statcast_savant_batter_all("2015-05-21","2015-05-29")
+
+jun15B1<-scrape_statcast_savant_batter_all("2015-05-29","2015-06-05")
+jun15B2<-scrape_statcast_savant_batter_all("2015-06-05","2015-06-13")
+jun15B3<-scrape_statcast_savant_batter_all("2015-06-13","2015-06-21")
+jun15B4<-scrape_statcast_savant_batter_all("2015-06-21","2015-06-29")
+
+jul15B1<-scrape_statcast_savant_batter_all("2015-06-29","2015-07-06")
+jul15B2<-scrape_statcast_savant_batter_all("2015-07-06","2015-07-13")
+jul15B3<-scrape_statcast_savant_batter_all("2015-07-13","2015-07-20")
+jul15B4<-scrape_statcast_savant_batter_all("2015-07-20","2015-07-27")
+
+aug15B1<-scrape_statcast_savant_batter_all("2015-07-27","2015-08-03")
+aug15B2<-scrape_statcast_savant_batter_all("2015-08-03","2015-08-10")
+aug15B3<-scrape_statcast_savant_batter_all("2015-08-10","2015-08-18")
+aug15B4<-scrape_statcast_savant_batter_all("2015-08-18","2015-08-24")
+aug15B5<-scrape_statcast_savant_batter_all("2015-08-24","2015-08-31")
+
+sep15B1<-scrape_statcast_savant_batter_all("2015-08-31","2015-09-06")
+sep15B2<-scrape_statcast_savant_batter_all("2015-09-06","2015-09-13")
+sep15B3<-scrape_statcast_savant_batter_all("2015-09-13","2015-09-20")
+sep15B4<-scrape_statcast_savant_batter_all("2015-09-20","2015-09-27")
+
+oct15B1<-scrape_statcast_savant_batter_all("2015-09-27","2015-10-04")
+oct15B2<-scrape_statcast_savant_batter_all("2015-10-04","2015-10-18")
+oct15B3<-scrape_statcast_savant_batter_all("2015-10-18","2015-12-31")
+
+#combine files
+sc2015B <- bind_rows(mar15B,apr15B1,apr15B2,apr15B3,may15B1,may15B2,may15B3,may15B4,jun15B1,jun15B2,jun15B3,jun15B4,jul15B1,jul15B2,jul15B3,jul15B4,aug15B1,aug15B2,aug15B3,aug15B4,aug15B5,sep15B1,sep15B2,sep15B3,sep15B4,oct15B1,oct15B2,oct15B3)
+
+#remove dupes
+sc2015B<-distinct(sc2015B)
+
 
 
