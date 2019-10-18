@@ -218,5 +218,7 @@ sc2015B <- bind_rows(mar15B,apr15B1,apr15B2,apr15B3,may15B1,may15B2,may15B3,may1
 #remove dupes
 sc2015B<-distinct(sc2015B)
 
+#combine all seasons if desired
+scAll <- bind_rows(sc2015B,sc2016B,sc2017B,sc2018B,sc2019B)
 
 
