@@ -1,0 +1,45 @@
+#scrape week by week for the whole season. have to do this as statcast only permits 40,000 records at a time
+
+mar19B<-scrape_statcast_savant_batter_all("2019-03-01","2019-04-05")
+
+apr19B1<-scrape_statcast_savant_batter_all("2019-04-05","2019-04-13")
+apr19B2<-scrape_statcast_savant_batter_all("2019-04-13","2019-04-20")
+apr19B3<-scrape_statcast_savant_batter_all("2019-04-20","2019-04-28")
+
+may19B1<-scrape_statcast_savant_batter_all("2019-04-28","2019-05-05")
+may19B2<-scrape_statcast_savant_batter_all("2019-05-05","2019-05-13")
+may19B3<-scrape_statcast_savant_batter_all("2019-05-13","2019-05-21")
+may19B4<-scrape_statcast_savant_batter_all("2019-05-21","2019-05-29")
+
+jun19B1<-scrape_statcast_savant_batter_all("2019-05-29","2019-06-05")
+jun19B2<-scrape_statcast_savant_batter_all("2019-06-05","2019-06-13")
+jun19B3<-scrape_statcast_savant_batter_all("2019-06-13","2019-06-21")
+jun19B4<-scrape_statcast_savant_batter_all("2019-06-21","2019-06-29")
+
+jul19B1<-scrape_statcast_savant_batter_all("2019-06-29","2019-07-06")
+jul19B2<-scrape_statcast_savant_batter_all("2019-07-06","2019-07-13")
+jul19B3<-scrape_statcast_savant_batter_all("2019-07-13","2019-07-20")
+jul19B4<-scrape_statcast_savant_batter_all("2019-07-20","2019-07-27")
+
+aug19B1<-scrape_statcast_savant_batter_all("2019-07-27","2019-08-03")
+aug19B2<-scrape_statcast_savant_batter_all("2019-08-03","2019-08-10")
+aug19B3<-scrape_statcast_savant_batter_all("2019-08-10","2019-08-17")
+aug19B4<-scrape_statcast_savant_batter_all("2019-08-17","2019-08-24")
+aug19B5<-scrape_statcast_savant_batter_all("2019-08-24","2019-08-31")
+
+sep19B1<-scrape_statcast_savant_batter_all("2019-08-31","2019-09-06")
+sep19B2<-scrape_statcast_savant_batter_all("2019-09-06","2019-09-13")
+sep19B3<-scrape_statcast_savant_batter_all("2019-09-13","2019-09-20")
+sep19B4<-scrape_statcast_savant_batter_all("2019-09-20","2019-09-27")
+
+oct19B1<-scrape_statcast_savant_batter_all("2019-09-27","2019-10-04")
+oct19B2<-scrape_statcast_savant_batter_all("2019-10-04","2019-10-18")
+oct19B3<-scrape_statcast_savant_batter_all("2019-10-18","2019-12-31")
+
+#combine all files
+sc2019B <- bind_rows(mar19B,apr19B1,apr19B2,apr19B3,may19B1,may19B2,may19B3,may19B4,jun19B1,jun19B2,jun19B3,jun19B4,jul19B1,jul19B2,jul19B3,jul19B4,aug19B1,aug19B2,aug19B3,aug19B4,aug19B5,sep19B1,sep19B2,sep19B3,sep19B4,oct19B1,oct19B2,oct19B3)
+
+#Remove duplicates
+sc2019B<-distinct(sc2019B)
+
+
