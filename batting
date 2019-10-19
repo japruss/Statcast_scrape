@@ -42,6 +42,9 @@ sc2019B <- bind_rows(mar19B,apr19B1,apr19B2,apr19B3,may19B1,may19B2,may19B3,may1
 #Remove duplicates
 sc2019B<-distinct(sc2019B)
 
+#bring in pitcher name
+sc2019<-left_join(sc2019B,chadwick_player_lu_table, by = c('pitcher'='key_mlbam')) %>% select(pitch_type:barrel,name_last,name_first) %>% mutate(pitcher_name = paste(name_first,name_last)) %>% select(pitch_type:barrel,pitcher_name) 
+
 
 #2018
 mar18B<-scrape_statcast_savant_batter_all("2018-03-01","2018-04-05")
