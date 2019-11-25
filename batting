@@ -45,6 +45,8 @@ sc2019B<-distinct(sc2019B)
 #bring in pitcher name
 sc2019<-left_join(sc2019B,chadwick_player_lu_table, by = c('pitcher'='key_mlbam')) %>% select(pitch_type:barrel,name_last,name_first) %>% mutate(pitcher_name = paste(name_first,name_last)) %>% select(pitch_type:barrel,pitcher_name) 
 
+#bring in fangraphs ID
+left_join(sc2019,chadwick_player_lu_table, by = c('batter'='key_mlbam')) %>% select(pitch_type:pitcher_name,key_fangraphs)
 
 #2018
 mar18B<-scrape_statcast_savant_batter_all("2018-03-01","2018-04-05")
